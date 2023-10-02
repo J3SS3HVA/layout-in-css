@@ -4,9 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Basic Layout 3</title>
-    <link rel="stylesheet" href="../style.css" />
+    <!-- <link rel="stylesheet" href="../style.css" /> -->
     <style>
-      /* Doe hier jouw ding! */
+      * {
+        box-sizing: border-box;
+      }
+      :root {
+        font-size: min(calc(1em + 1vw), 4em);
+      }
+      body {
+        min-height: 100vh;
+        font-family: sans-serif;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: [row1-start] 60% [row1-end] 20% [third-line] 20% [last-line];
+        grid-template-areas:
+          "main main"
+          "footer footer"
+          "header nav";
+        gap: 20px;
+      }
+      body > * {
+        min-height: 1em;
+      }
+      header {
+        background: cyan;
+        grid-area: header;
+      }
+      header > h1 {
+        margin: 0;
+      }
+      nav {
+        background: magenta;
+        grid-area: nav;
+      }
+      main {
+        background: yellow;
+        grid-area: main;
+      }
+      footer {
+        background: black;
+        color: white;
+        grid-area: footer;
+      }
     </style>
   </head>
   <body id="basic-layout-3">
