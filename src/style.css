@@ -10,7 +10,7 @@ body {
   font-family: sans-serif;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: [row1-start] 50% [row1-end] 25% [third-line] 25% [last-line];
+  /* grid-template-rows: [row1-start] 50% [row1-end] 25% [third-line] 25% [last-line]; */
   grid-template-areas:
     "... header header header"
     "nav nav nav ..."
