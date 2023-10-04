@@ -4,9 +4,64 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Advanced Layout 6</title>
-    <link rel="stylesheet" href="../style.css" />
+    <!-- <link rel="stylesheet" href="../style.css" /> -->
     <style>
-      /* Doe hier jouw ding! */
+      * {
+  box-sizing: border-box;
+}
+:root {
+  font-size: min(calc(1em + 1vw), 4em);
+}
+body {
+  min-height: 100vh;
+  font-family: sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: [row1-start] 12.5% [row1-end] 12.5% [row3-start] 12.5% [row3-end] 12.5% [row5-start] 12.5% [row5-end] 12.5% [row7-start] 12.5% [row7-end] 12.5%;
+  grid-template-areas:
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "main main main main"
+    "footer footer footer footer"
+    "footer footer footer footer"
+    "footer footer footer footer"
+    "footer footer footer footer";
+  gap: 20px;
+}
+body > * {
+  min-height: 1em;
+}
+header {
+  background: cyan;
+  grid-area: header;
+  grid-column-start: 3;
+  grid-column-end: 3;
+  grid-row-start: 2;
+  grid-row-end: 6;
+  z-index: 1;
+}
+header > h1 {
+  margin: 0;
+}
+nav {
+  background: magenta;
+  grid-area: nav;
+  grid-column-start: 2;
+  grid-column-end: 2;
+  grid-row-start: 4;
+  grid-row-end: 8;
+  z-index: 1;
+}
+main {
+  background: yellow;
+  grid-area: main;
+}
+footer {
+  background: black;
+  color: white;
+  grid-area: footer;
+}
     </style>
   </head>
   <body id="advanced-layout-6">
