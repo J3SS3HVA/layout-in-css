@@ -16,9 +16,9 @@
         min-height: 100vh;
         font-family: sans-serif;
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr;
-        grid-template-rows: [row1-start] 25% [row1-end] 60% [third-line] auto [last-line];
-        grid-template-areas:
+        grid-template-columns: 1fr 1fr 1fr 1fr; /* geeft aan hoeveel kolomen er zijn. 4 * 1fr = 4 columns van 25% breed*/
+        grid-template-rows: [row1-start] 25% [row1-end] 60% [third-line] auto [last-line]; /*laat zien hoe groot elke row is. auto = 15 % */
+        grid-template-areas: /* hier laat ik zien waar elk element komt. je ziet dat er 4 kolommen en 3 rows zijn */
           "header header header header"
           "nav main main main"
           "footer footer footer footer";
